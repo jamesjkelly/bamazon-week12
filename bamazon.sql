@@ -3,82 +3,45 @@ CREATE DATABASE IF NOT EXISTS bamazon_db;
 
 USE bamazon_db;
 
-CREATE TABLE IF NOT EXISTS headWear (
-  ID INTEGER AUTO_INCREMENT NOT NULL,
-  prodcat VARCHAR(40) NOT NULL,
-  prodname VARCHAR(40) NOT NULL,
-  retailorice DECIMAL(20, 2) NOT NULL,
-  inventory INT(6) NOT NULL,
-PRIMARY KEY (ID)
+CREATE TABLE IF NOT EXISTS albums(
+  item_ID INTEGER AUTO_INCREMENT NOT NULL,
+  artist VARCHAR(50) NOT NULL,
+  album VARCHAR(50) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  stock_quantity INT(5) NOT NULL,
+PRIMARY KEY (item_ID)
 );
 
 
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "yankees", 25.00, 1000);
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Ed Sheeran", "Divide", 20.00, 2000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Taylor Swift", "Red", 20.00, 2000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Alan Jackson", "Greatest Hits", 24.00, 1500);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Marshall Tucker", "Greatest Hits", 10.00, 2000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Toby Keith", "35 Big Hits", 20.00, 2000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Carrie Underwood", "Greatest Hits: Decade #1", 25.00, 2000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Waylon Jennings", "Greatest Hits", 12.00, 200);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("John Denver", "Greatest Hits", 7.00, 1000);
+
+INSERT INTO albums (artist, album, price, stock_quantity)
+VALUES ("Joe Nichols", "Greatest Hits", 5.00, 200);
 
 
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "mets", 25.00, 1000);
 
 
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "dodgers", 25.00, 1000);
 
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "twins", 25.00, 140);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "cubs", 22.00, 340);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "mariners", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "astros", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "knicks", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "nets", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "heat", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "cavaliers", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "clippers", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "devils", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "cowboys", 25.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "jets", 23.00, 1000);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "browns", 15.00, 300);
-
-
-INSERT INTO headWear (prodcat, prodname, retailprice, inventory)
-VALUES ("snap back", "mariners", 21.00, 400);
-
-
-SELECT * FROM headWear;
+SELECT * FROM albums;
